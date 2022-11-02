@@ -177,8 +177,9 @@ main {
         text-align: left;
     }
     img {
-        margin-top: 1em;
+        margin-top: 2em;
         margin-bottom: 1em;
+        border-radius: 10%;
     }
     &:hover {
         @include hover;
@@ -375,6 +376,9 @@ main {
         }
     
 }
+.modal-body{
+    @extend .producto-carrito
+}
 #precio-total{
     display: flex;
     align-items: center;
@@ -386,19 +390,23 @@ main {
     justify-content: center;
 }
 
-
-.eliminar{
-    width: 5em;
-    height: 2em;
-    
-   
-    
-}
 .icon-carrito{
     font-size: 2px;
     color: black;
 }
+.btn-modal{
+    @extend .btn;
+    margin: 1em;
+    padding: .5em;
+    border-radius: 10%;
+    width: auto;
+    height: auto;
 
+}
+.abrir-modal{
+    @extend .btn-modal;
+    width: 10%;
+}
 
 
 

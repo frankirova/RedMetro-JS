@@ -231,8 +231,9 @@ main {
   text-align: left;
 }
 .card-servicio img, .card-servicio-empresas img {
-  margin-top: 1em;
+  margin-top: 2em;
   margin-bottom: 1em;
+  border-radius: 10%;
 }
 .card-servicio:hover, .card-servicio-empresas:hover {
   background-color: rgb(182, 180, 180);
@@ -322,7 +323,7 @@ main {
   padding: 10px;
 }
 
-.btn {
+.btn, .btn-modal, .abrir-modal {
   color: white;
   background-color: #006C67;
   border: none;
@@ -330,7 +331,7 @@ main {
   margin-bottom: 10rem;
   margin-top: 2rem;
 }
-.btn:hover {
+.btn:hover, .btn-modal:hover, .abrir-modal:hover {
   color: white;
   background-color: rgba(9, 151, 144, 0.5490196078);
 }
@@ -383,7 +384,7 @@ main {
   font-size: 1em;
 }
 
-.producto-carrito {
+.producto-carrito, .modal-body {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -391,13 +392,13 @@ main {
   margin-bottom: 2%;
   border-top: rgb(157, 157, 157) 2px solid;
 }
-.producto-carrito p {
+.producto-carrito p, .modal-body p {
   margin-top: 2%;
 }
-.producto-carrito span {
+.producto-carrito span, .modal-body span {
   margin-top: 2%;
 }
-.producto-carrito .carrito-img {
+.producto-carrito .carrito-img, .modal-body .carrito-img {
   width: 5em;
   height: 5em;
   border-radius: 50%;
@@ -416,14 +417,21 @@ main {
   justify-content: center;
 }
 
-.eliminar {
-  width: 5em;
-  height: 2em;
-}
-
 .icon-carrito {
   font-size: 2px;
   color: black;
+}
+
+.btn-modal, .abrir-modal {
+  margin: 1em;
+  padding: 0.5em;
+  border-radius: 10%;
+  width: auto;
+  height: auto;
+}
+
+.abrir-modal {
+  width: 10%;
 }
 
 /* footer */

@@ -56,6 +56,35 @@
                     </ul>
                 </div>
             </div>
+            
+                <button type="button" class=" abrir-modal" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                  
+                  <!-- Modal -->
+                  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="staticBackdropLabel">Mi carrito</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div id="contenedor-carrito">">
+                          
+                        </div>
+                        <div>
+                          <p class="precio-producto"><b> Precio Total:<span id = "precio-total">0</span></b></p>
+                      </div>
+                        <div class="modal-footer">
+                        
+                          <button type="button" class="btn-modal btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn-modal btn-primary">Vaciar</button>
+                          <button type="button" class="btn-modal btn-primary">Comprar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            
         </nav>
     </header>
 
@@ -65,7 +94,7 @@
             <div id="contenedor-carrito">
             </div>
 
-            <p class="precio-producto"><b> Precio Total:<span id = "precio-total">0</span></b></p>
+            <!-- <p class="precio-producto"><b> Precio Total:<span id = "precio-total">0</span></b></p> -->
 
         </div>
     
@@ -125,6 +154,7 @@
           </script>
     
 <script src="../js/producto.js">  </script>
+<script src="https://kit.fontawesome.com/78da2b5c9a.js" crossorigin="anonymous"></script>
     
 </body>
 </html>
