@@ -1,0 +1,58 @@
+@import "var-map";
+
+/* footer */
+
+footer {
+    grid-area: footer;
+    background-color: $green;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+
+
+    .lista-nav-footer {
+        width: 33.33%;
+        margin-top: 1em;
+    }
+
+    .item-nav-footer {
+        list-style: none;
+        color: rgba(255, 255, 255, 0.713);
+        padding: 5px;
+        text-decoration: none;
+        line-height: 1.2em;
+    }
+    .enlace-menu-footer {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.713) ;
+        &:hover {
+            color: white;
+        }
+    }
+
+    .contacto-inferior {
+        align-items: center;
+        text-align: center;
+        width: 33.33%;
+        letter-spacing: 1em;
+    }
+    .icon-footer {
+        font-size: 1.8em;
+        color: rgba(255, 255, 255, 0.713);
+
+        &:hover {
+            color: white;
+        }
+    }
+    .logos-partners {
+        width: 33.33%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: flex-end;
+        margin-top: 10px;
+    }
+}

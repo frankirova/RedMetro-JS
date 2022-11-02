@@ -1,0 +1,201 @@
+/* variables */
+@import "var-map";
+
+
+/*MEDIAS QUERIES*/
+
+
+@media (max-width: 420px){
+  
+  .img{height: 100%}
+
+  .informacion {
+    margin-right: 45%;
+    align-content: center;
+
+  }
+
+  .titulo-empresas {
+    margin: 0;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5em;
+    height: auto;
+    width: 75%;
+    text-align: center;
+  
+  }
+  .internet {
+    ul {
+    margin-right: 10%;
+    }
+
+  }
+
+  .item-lista-internet {  
+    font-size: 1em;
+  }
+  b {font-size: 1.2em;}
+
+  .titulo-card {
+    padding: 0%;
+    margin-bottom: 10%;
+    font-size: 1.7em;
+  }
+  .card-servicio-empresas {
+    ul {
+      margin-left: 10%;
+      margin-right: 10%;
+      font-size: 1em;
+    }
+    p {
+      margin-left: 10%;
+      margin-right: 10%;
+      text-align: center;
+      font-style: italic;
+    }
+  }
+
+
+  .card-index, .card-servicio, .card-servicio-empresas, .card-voz-ip, .card-datos, .card-datacenter {
+    width: 100%;
+    
+    }
+    .servicios-dedicados, .voz-ip, .datos, .datacenter {
+        flex-direction: column;
+    }
+
+  footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+    .lista-nav-footer, .logos-partners  {
+     display: none;
+    }
+    .contacto-inferior {
+    
+      width: 100%;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+    
+    }
+  }
+  
+  .servicios-recidenciales {
+    flex-direction: column;
+  }
+  .form-group{
+    margin-left:0;
+  }
+  .contenedor-btn {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .quienes-somos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    p{
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+    .titulo-quienes-somos {
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+  }
+  .card-quienes-somos, .mapa{
+    display: none;
+  }
+
+}
+
+@media (max-width: 768px){
+  
+    .img{
+        grid-area:img;
+        height: 100%; 
+    }  
+
+    .informacion {
+        grid-area:info;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .titulo-internet, .titulo-voz-ip, .titulo-voz-ip, .titulo-datos, .titulo-datacenter {
+    padding: 0;
+    font-size: 2em;
+    }
+
+    footer {
+        grid-area: footer;
+        display: flex;
+        justify-content: center;
+        padding: 5em;
+    
+
+      .lista-nav-footer, .logos-partners  {
+        display: none;
+      }
+    }
+    .servicios-residenciales {
+        flex-direction: column;
+    
+      }
+      .servicios-empresas {
+        flex-direction: column;
+    
+      }
+
+      .card-servicio-empresas {
+        ul {
+          margin-left: 10%;
+          margin-right: 10%;
+          font-size: 1.4em;
+        }
+        p {
+          margin-left: 10%;
+          margin-right: 10%;
+          text-align: center;
+          font-style: italic;
+        }
+      }
+    
+      .card-index, .card-servicio, .card-servicio-empresas, .card-voz-ip, .card-datos, .card-datacenter {
+        width: 100%;
+        margin: 0;
+        
+        }
+        .servicios-dedicados, .voz-ip, .datos, .datacenter {
+            flex-direction: column;
+        }
+        .form-group{
+            margin-left:25%;
+            margin-right: 25%;
+        }
+        .contenedor-btn {
+          display: flex;
+          justify-content: center;
+          margin-left: 3em;
+        }
+
+        /*====quienes somos====*/
+        .quienes-somos p {
+          margin-left: 5%;
+          margin-right: 5%;
+        }
+        .card-quienes-somos, .mapa{
+          display: none;
+        }
+       
+}

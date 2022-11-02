@@ -1,0 +1,645 @@
+@import url("https://fonts.googleapis.com/css2?family=Gantari&display=swap");
+@font-face {
+  font-family: "Gantari", sans-serif;
+  src: url();
+}
+/* variables */
+/*VARIABLES*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gantari", sans-serif;
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "nav" "img" "info" "footer";
+}
+
+a {
+  color: white;
+}
+a:hover {
+  color: white;
+}
+
+.botoncalcu {
+  width: 50px;
+  height: 50px;
+}
+
+/* header */
+/* variables */
+/*VARIABLES*/
+/* header */
+header {
+  background-color: #006C67;
+  height: 4em;
+}
+
+/* nav */
+.dropdown-item:hover {
+  background-color: rgb(207, 207, 207);
+  color: #006C67;
+}
+
+.dropdown-menu {
+  background-color: rgb(207, 207, 207);
+}
+
+.nav-item-edit {
+  color: white;
+  text-decoration: none;
+  --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  transition: -webkit-clip-path 0.5s;
+  transition: clip-path 0.5s;
+  transition: clip-path 0.5s, -webkit-clip-path 0.5s;
+}
+.nav-item-edit:hover {
+  --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  color: white;
+}
+.nav-item-edit:after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 3px;
+  margin-top: 3px;
+  background: rgb(207, 207, 207);
+  -webkit-clip-path: var(--clippy);
+          clip-path: var(--clippy);
+  transition: -webkit-clip-path 0.5s;
+  transition: clip-path 0.5s;
+  transition: clip-path 0.5s, -webkit-clip-path 0.5s;
+}
+
+.enlace-menu-nav {
+  color: white;
+  text-decoration: none;
+  height: 20px;
+  font-size: 1.2em;
+}
+
+/* main */
+/* variables */
+/*VARIABLES*/
+/* main */
+main {
+  background-color: rgb(207, 207, 207);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* imagen index */
+.img {
+  grid-area: img;
+  width: auto;
+  height: 40em;
+  transition: all 0.5s ease-in-out;
+}
+
+.img-home {
+  width: 100%;
+  height: 100%;
+}
+
+/* titulos-index */
+.titulo-internet, .titulo-voz-ip, .titulo-datos, .titulo-datacenter {
+  width: 75%;
+  border-bottom: 1px solid gray;
+  text-align: center;
+}
+
+/* info */
+.informacion {
+  display: flex;
+  flex-direction: row;
+  grid-area: info;
+}
+
+/* cards-index */
+.card-index {
+  padding: 4em;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-index:hover {
+  background-color: rgb(182, 180, 180);
+  color: #006C67;
+  border-radius: 15px;
+}
+
+/* boton contactanos */
+.boton-contacto {
+  padding: 10px;
+  font-size: 1.3em;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  top: 50px;
+  margin-bottom: 60px;
+  background-color: #006C67;
+}
+.boton-contacto:hover {
+  background-color: rgba(9, 151, 144, 0.4941176471);
+  color: white;
+  border-radius: 10px;
+}
+
+/* lista index */
+.lista-index {
+  list-style: none;
+  line-height: 2em;
+}
+
+/* boton ver mas */
+.ver-mas {
+  width: 120px;
+  padding: 25px;
+  height: 10px;
+  font-size: 1.2em;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  border-radius: 30px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  background-color: #006C67;
+  margin: 20px;
+}
+
+/* pag-servicios */
+.internet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lista-servicios {
+  margin: 10px;
+  text-align: center;
+  line-height: 2em;
+  font-size: 20px;
+  list-style: none;
+}
+
+.lista-voz-ip {
+  margin: 10px;
+  text-align: center;
+  line-height: 2em;
+  font-size: 20px;
+}
+
+/* CARDS-SERVICIOS */
+.servicios-residenciales, .servicios-empresas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#servicios-residenciales {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+#servicios-residenciales button {
+  margin-left: auto;
+}
+
+.card-servicio, .card-servicio-empresas {
+  display: grid;
+  width: 33.33%;
+  align-content: space-between;
+  justify-items: center;
+  justify-content: space-evenly;
+}
+.card-servicio p, .card-servicio-empresas p {
+  font-size: 1.5em;
+}
+.card-servicio li, .card-servicio-empresas li {
+  font-size: 0.9em;
+  list-style: circle;
+  text-align: left;
+}
+.card-servicio img, .card-servicio-empresas img {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.card-servicio:hover, .card-servicio-empresas:hover {
+  background-color: rgb(182, 180, 180);
+  color: #006C67;
+  border-radius: 15px;
+}
+
+/* Cards-empresas */
+.card-servicio-empresas p {
+  margin-top: 5%;
+  margin-bottom: 1rem;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 1.3em;
+  text-align: center;
+}
+.card-servicio-empresas .titulo-card {
+  font-size: 2em;
+  border-top: solid #006C67;
+}
+
+/* pag quienes somos */
+.mapa {
+  margin-top: 10em;
+  margin-right: 2em;
+  grid-area: mapa;
+}
+
+.titulo-quienes-somos {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+  border-bottom: 3px solid #006C67;
+}
+
+.parrafo-quienes-somos {
+  text-align: center;
+  margin-bottom: 3em;
+  margin-left: 5em;
+  margin-right: 5em;
+  font-size: 1.2em;
+}
+
+.quienes-somos {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: "texto mapa" "texto card-quienes-somos" "texto card-quienes-somos";
+}
+
+.texto {
+  grid-area: texto;
+}
+
+.card-quienes-somos {
+  grid-area: card-quienes-somos;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+}
+
+/* pag contactos */
+.main-contacto h1 {
+  font-size: 4em;
+  text-align: center;
+}
+.main-contacto h3 {
+  font-size: 2em;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+/* formulario */
+.titulo-contacto {
+  text-align: center;
+  padding: 20px;
+}
+
+.header {
+  color: #006C67;
+  font-size: 2em;
+  padding: 10px;
+}
+
+.btn {
+  color: white;
+  background-color: #006C67;
+  border: none;
+  margin-right: 33%;
+  margin-bottom: 10rem;
+  margin-top: 2rem;
+}
+.btn:hover {
+  color: white;
+  background-color: rgba(9, 151, 144, 0.5490196078);
+}
+
+.form-group {
+  margin-left: 25%;
+}
+
+/* pag-empresas */
+.titulo-empresas {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  font-size: 2.5em;
+  width: 50%;
+  height: 50px;
+  background-color: #006C67;
+  color: rgb(207, 207, 207);
+  margin-left: 25%;
+  text-transform: uppercase;
+}
+
+.titulo-card-empresas {
+  font-size: 2em;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  width: 75%;
+  border-top: solid #006C67;
+  text-align: center;
+}
+
+#catalogo {
+  display: flex;
+  flex-direction: row;
+}
+
+#botoncalcu {
+  margin: 0;
+}
+
+#btn-back {
+  margin: 0;
+  margin-top: 1em;
+  margin-left: 1em;
+  width: 4em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+}
+
+.producto-carrito {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border-top: rgb(157, 157, 157) 2px solid;
+}
+.producto-carrito p {
+  margin-top: 2%;
+}
+.producto-carrito span {
+  margin-top: 2%;
+}
+.producto-carrito .carrito-img {
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  margin-top: 2%;
+}
+
+#precio-total {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.precio-producto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eliminar {
+  width: 5em;
+  height: 2em;
+}
+
+.icon-carrito {
+  font-size: 2px;
+  color: black;
+}
+
+/* footer */
+/*VARIABLES*/
+/* footer */
+footer {
+  grid-area: footer;
+  background-color: #006C67;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+}
+footer .lista-nav-footer {
+  width: 33.33%;
+  margin-top: 1em;
+}
+footer .item-nav-footer {
+  list-style: none;
+  color: rgba(255, 255, 255, 0.713);
+  padding: 5px;
+  text-decoration: none;
+  line-height: 1.2em;
+}
+footer .enlace-menu-footer {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.713);
+}
+footer .enlace-menu-footer:hover {
+  color: white;
+}
+footer .contacto-inferior {
+  align-items: center;
+  text-align: center;
+  width: 33.33%;
+  letter-spacing: 1em;
+}
+footer .icon-footer {
+  font-size: 1.8em;
+  color: rgba(255, 255, 255, 0.713);
+}
+footer .icon-footer:hover {
+  color: white;
+}
+footer .logos-partners {
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: flex-end;
+  margin-top: 10px;
+}
+
+/*MEDIAS QUERIES*/
+/* variables */
+/*VARIABLES*/
+/*MEDIAS QUERIES*/
+@media (max-width: 420px) {
+  .img {
+    height: 100%;
+  }
+  .informacion {
+    margin-right: 45%;
+    align-content: center;
+  }
+  .titulo-empresas {
+    margin: 0;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5em;
+    height: auto;
+    width: 75%;
+    text-align: center;
+  }
+  .internet ul {
+    margin-right: 10%;
+  }
+  .item-lista-internet {
+    font-size: 1em;
+  }
+  b {
+    font-size: 1.2em;
+  }
+  .titulo-card {
+    padding: 0%;
+    margin-bottom: 10%;
+    font-size: 1.7em;
+  }
+  .card-servicio-empresas ul {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 1em;
+  }
+  .card-servicio-empresas p {
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    font-style: italic;
+  }
+  .card-index, .card-servicio, .card-servicio-empresas, .card-voz-ip, .card-datos, .card-datacenter {
+    width: 100%;
+  }
+  .servicios-dedicados, .voz-ip, .datos, .datacenter {
+    flex-direction: column;
+  }
+  footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  footer .lista-nav-footer, footer .logos-partners {
+    display: none;
+  }
+  footer .contacto-inferior {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+  .servicios-recidenciales {
+    flex-direction: column;
+  }
+  .form-group {
+    margin-left: 0;
+  }
+  .contenedor-btn {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .quienes-somos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .quienes-somos p {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .quienes-somos .titulo-quienes-somos {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .card-quienes-somos, .mapa {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .img {
+    grid-area: img;
+    height: 100%;
+  }
+  .informacion {
+    grid-area: info;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .titulo-internet, .titulo-voz-ip, .titulo-voz-ip, .titulo-datos, .titulo-datacenter {
+    padding: 0;
+    font-size: 2em;
+  }
+  footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    padding: 5em;
+  }
+  footer .lista-nav-footer, footer .logos-partners {
+    display: none;
+  }
+  .servicios-residenciales, .servicios-empresas {
+    flex-direction: column;
+  }
+  .servicios-empresas {
+    flex-direction: column;
+  }
+  .card-servicio-empresas ul {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 1.4em;
+  }
+  .card-servicio-empresas p {
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    font-style: italic;
+  }
+  .card-index, .card-servicio, .card-servicio-empresas, .card-voz-ip, .card-datos, .card-datacenter {
+    width: 100%;
+    margin: 0;
+  }
+  .servicios-dedicados, .voz-ip, .datos, .datacenter {
+    flex-direction: column;
+  }
+  .form-group {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  .contenedor-btn {
+    display: flex;
+    justify-content: center;
+    margin-left: 3em;
+  }
+  /*====quienes somos====*/
+  .quienes-somos p {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .card-quienes-somos, .mapa {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
