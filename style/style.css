@@ -215,27 +215,27 @@ main {
   margin-left: auto;
 }
 
-.card-servicio, .card-servicio-empresas {
+.card-servicio, .card-producto, .card-servicio-empresas {
   display: grid;
   width: 33.33%;
   align-content: space-between;
   justify-items: center;
   justify-content: space-evenly;
 }
-.card-servicio p, .card-servicio-empresas p {
+.card-servicio p, .card-producto p, .card-servicio-empresas p {
   font-size: 1.5em;
 }
-.card-servicio li, .card-servicio-empresas li {
+.card-servicio li, .card-producto li, .card-servicio-empresas li {
   font-size: 0.9em;
   list-style: circle;
   text-align: left;
 }
-.card-servicio img, .card-servicio-empresas img {
+.card-servicio img, .card-producto img, .card-servicio-empresas img {
   margin-top: 2em;
   margin-bottom: 1em;
   border-radius: 10%;
 }
-.card-servicio:hover, .card-servicio-empresas:hover {
+.card-servicio:hover, .card-producto:hover, .card-servicio-empresas:hover {
   background-color: rgb(182, 180, 180);
   color: #006C67;
   border-radius: 15px;
@@ -431,7 +431,41 @@ main {
 }
 
 .abrir-modal {
-  width: 10%;
+  font-size: 1.1em;
+  margin: 0.5em;
+  padding-right: 0.5em;
+  width: auto;
+  height: auto;
+}
+
+#msj-final {
+  text-align: center;
+}
+#msj-final p {
+  font-size: 1.5em;
+}
+
+.card-producto {
+  align-content: space-around;
+  border: 1px solid gray;
+  border-top: 1px solid gray;
+}
+.card-producto img {
+  width: 13em;
+  height: auto;
+}
+.card-producto li {
+  list-style: none;
+  text-align: left;
+}
+.card-producto p {
+  text-align: left;
+}
+
+.btn-agregar {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3em;
 }
 
 /* footer */
@@ -535,7 +569,7 @@ footer .logos-partners {
     text-align: center;
     font-style: italic;
   }
-  .card-index, .card-servicio, .card-servicio-empresas, .card-voz-ip, .card-datos, .card-datacenter {
+  .card-index, .card-servicio, .card-producto, .card-servicio-empresas, .card-voz-ip, .card-datos, .card-datacenter {
     width: 100%;
   }
   .servicios-dedicados, .voz-ip, .datos, .datacenter {
@@ -626,7 +660,7 @@ footer .logos-partners {
     text-align: center;
     font-style: italic;
   }
-  .card-index, .card-servicio, .card-servicio-empresas, .card-voz-ip, .card-datos, .card-datacenter {
+  .card-index, .card-servicio, .card-producto, .card-servicio-empresas, .card-voz-ip, .card-datos, .card-datacenter {
     width: 100%;
     margin: 0;
   }

@@ -1,3 +1,4 @@
+
 // let precioTotal = 0;
 function Producto (id,nombre,stock,precio,img,liCaracteristicas,cantidad){
     this.id = id
@@ -14,7 +15,7 @@ let producto3 = new Producto (3,"ARCHER C60",5, 17600,"../img/archerc602-300x300
 
 let listaProductos = [producto1, producto2, producto3 ];
 let listaProductosCStock = listaProductos.filter((producto) => producto.stock > 0) ;
-console.log (listaProductos)
+
 // ========================================================================================
 
 
@@ -38,7 +39,7 @@ let catalogo = document.getElementById("catalogo")
 
 for(const producto of listaProductosCStock){
     let card = document.createElement ("div");
-    card.className = "card-servicio";
+    card.className = "card-producto";
     card.innerHTML = `<img src="${producto.img}"></img>
     <p class="titulo-card">${producto.nombre}</p>
     <ul class="lista-servicios">
@@ -46,12 +47,22 @@ for(const producto of listaProductosCStock){
         <li class="item-lista-internet">${producto.liCaracteristicas[1]}</li>
     </ul> 
     <p><b>$${producto.precio}</b></p> 
-    <button id="agregar ${producto.id}"class="boton-contacto">Agregar al carrito</button> `;
+    <button id="agregar ${producto.id}"class="btn-agregar btn btn-success">Agregar al carrito</button> `;
     
     catalogo.appendChild(card);
     const boton = document.getElementById(`agregar ${producto.id}`);
     boton.addEventListener("click",()=>{
         agregarAlCarrito(producto.id)
+        Toastify({
+            text: "Agregado al carrito",
+            className: "info",
+            duration: 2000,
+            style: {
+              background: "#CFCFCF",
+              color: "#006C67",
+            }
+          }).showToast();
+        
 
     })
 }; 
@@ -70,7 +81,7 @@ const agregarAlCarrito = (prodId) => {
     const item = listaProductos.find((prod) => prod.id === prodId);
     carrito.push(item );
     
-    console.log(carrito);
+   
 };
 actualizarCarrito();
 }
@@ -79,6 +90,14 @@ const eliminarDelCarrito = (prodId) => {
     const indice = carrito.indexOf(item)
     carrito.splice(indice,1)
     actualizarCarrito();
+    Toastify({
+        text: "Eliminado del carrito",
+        className: "info",
+        style: {
+          background: "#CFCFCF",
+          color: "#FF4B4B",
+        }
+      }).showToast();
 }
 
 
@@ -103,9 +122,33 @@ const actualizarCarrito = ()=> {
     precioTotal.innerText = carrito.reduce((acc,prod) => acc + prod.precio, 0 )
 }
 
-// `<img class = "carrito-img"src = ${prod.img}></img>
-// <p>${prod.nombre}</p>
-// <p>$${prod.precio}</p>
-// <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
-// <button class="eliminar boton-contacto" onclick = "eliminarDelCarrito(${prod.id})">Eliminar<i class="fa-solid fa-trash-xmark icon-carrito"></i></button>
-// `
+const btnVaciar = document.getElementById("btn-vaciar");
+btnVaciar.addEventListener("click", vaciarCarrito);
+function vaciarCarrito(){
+    carrito = []
+    contenedorCarrito.innerHTML = ``;
+    actualizarCarrito()
+
+    Toastify({
+        text: "Carrito vaciado",
+        className: "info",
+        style: {
+          background: "#CFCFCF",
+          color: "#FF4B4B",
+        }
+      }).showToast();
+}
+
+
+const btnComprar = document.getElementById("btn-comprar");
+btnComprar.addEventListener("click",()=>{
+    Swal.fire({
+        title: '',
+        text: 'Su compra fue realizada con exito',
+        icon: 'success',
+        confirmButtonText: 'Ok',
+        
+        confirmButtonColor:'#006C67',
+        background: 'rgb(170, 170, 170)'
+    })
+})

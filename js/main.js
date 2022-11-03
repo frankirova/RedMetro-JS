@@ -1,4 +1,5 @@
 // ==============Obj abonos=================
+
 const listaAbonos = [
     {
         id : 1,
@@ -20,9 +21,7 @@ const listaAbonos = [
     }
 ]
 
-
 // =============Arrays y variables=================
-
 
 let listaNombresAbonos = [];
 for (const abono of listaAbonos){
@@ -84,21 +83,38 @@ function storageForm(){
     })
     localStorage.setItem('cliente', JSON.stringify(cliente))
     localStorage.setItem('abonoElegido', JSON.stringify(abonoElegido))
+    
     mostrarMensajeBienvenida()
 };
+
+// Swall.fire({
+//     title: "Bienvenido a Red Metropolitana",
+//     text:"Abono elegido:${nombreAbonoe}total : $${precioAbonoe + precioInstalacion}",
+//     icon:"succes",
+//     confirmButtonText: "Realizado"
+// })
 function mostrarMensajeBienvenida (){
     for (const abonoe of abonoElegido){
         let nombreAbonoe = abonoe.nombre
         let precioAbonoe = abonoe.precio
     
-    
-    serviciosResidenciales.innerHTML =  `
-    <div>
-    <p><b>Bienvenido ${cliente[0]} a Red Metropolitana</b></p> 
-    <p>Abono elegido: <b>${nombreAbonoe}</b></p>
-    <p>total : $${precioAbonoe + precioInstalacion}</p>
-    </div>
-    `
+        Swal.fire({
+            title: 'Registrado con exito',
+            // text: 'Registrado con exito',
+            icon: 'success',
+            confirmButtonText: 'Ok',
+            
+            confirmButtonColor:'#006C67',
+            background: 'rgb(170, 170, 170)'
+        })
+
+        serviciosResidenciales.innerHTML =  `
+        <div id="msj-final">
+        <p><b>Bienvenido ${cliente[0]} a Red Metropolitana</b></p> 
+        <p>Abono elegido: <b>${nombreAbonoe}</b></p>
+        <p>Total : <b>$${precioAbonoe + precioInstalacion}</b></p>
+        </div>
+        `
     }
 }
 
@@ -218,3 +234,4 @@ function capturar(){
 
 let cliente = [ ];
 console.log(cliente)
+
