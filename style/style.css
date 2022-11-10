@@ -536,6 +536,7 @@ footer .logos-partners {
   .card-producto {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   #servicios-residenciales {
     flex-direction: column;
