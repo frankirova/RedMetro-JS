@@ -533,6 +533,13 @@ footer .logos-partners {
     margin-right: 45%;
     align-content: center;
   }
+  .card-producto {
+    display: flex;
+    flex-direction: column;
+  }
+  #servicios-residenciales {
+    flex-direction: column;
+  }
   #catalogo {
     display: flex;
     flex-direction: column;
@@ -594,9 +601,6 @@ footer .logos-partners {
     align-content: center;
     justify-content: center;
   }
-  .servicios-recidenciales {
-    flex-direction: column;
-  }
   .form-group {
     margin-left: 0;
   }
@@ -634,6 +638,9 @@ footer .logos-partners {
     flex-direction: column;
     align-items: center;
   }
+  #servicios-residenciales {
+    flex-direction: column;
+  }
   #catalogo {
     display: flex;
     flex-direction: column;
@@ -650,9 +657,6 @@ footer .logos-partners {
   }
   footer .lista-nav-footer, footer .logos-partners {
     display: none;
-  }
-  .servicios-residenciales, .servicios-empresas {
-    flex-direction: column;
   }
   .servicios-empresas {
     flex-direction: column;

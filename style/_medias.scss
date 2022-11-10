@@ -14,10 +14,18 @@
     align-content: center;
 
   }
+  .card-producto{
+    display: flex;
+    flex-direction: column;
+  }
+  #servicios-residenciales{
+    flex-direction: column;
+  }
   #catalogo{
     display: flex;
     flex-direction: column;
   }
+  
   .titulo-empresas {
     margin: 0;
     margin-top: 10%;
@@ -88,10 +96,7 @@
     
     }
   }
-  
-  .servicios-recidenciales {
-    flex-direction: column;
-  }
+
   .form-group{
     margin-left:0;
   }
@@ -134,10 +139,15 @@
         flex-direction: column;
         align-items: center;
     }
+    #servicios-residenciales{
+      flex-direction: column;
+    }
+   
     #catalogo{
       display: flex;
       flex-direction: column;
     }
+    
     .titulo-internet, .titulo-voz-ip, .titulo-voz-ip, .titulo-datos, .titulo-datacenter {
     padding: 0;
     font-size: 2em;
@@ -154,10 +164,7 @@
         display: none;
       }
     }
-    .servicios-residenciales {
-        flex-direction: column;
     
-      }
       .servicios-empresas {
         flex-direction: column;
     
