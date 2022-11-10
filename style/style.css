@@ -533,6 +533,10 @@ footer .logos-partners {
     margin-right: 45%;
     align-content: center;
   }
+  #catalogo {
+    display: flex;
+    flex-direction: column;
+  }
   .titulo-empresas {
     margin: 0;
     margin-top: 10%;
@@ -629,6 +633,10 @@ footer .logos-partners {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  #catalogo {
+    display: flex;
+    flex-direction: column;
   }
   .titulo-internet, .titulo-voz-ip, .titulo-voz-ip, .titulo-datos, .titulo-datacenter {
     padding: 0;

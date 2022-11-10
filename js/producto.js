@@ -1,9 +1,4 @@
 
-// let listaProductosCStock = listaProductos.filter((producto) => producto.stock > 0) ;
-
-// ======================================================================================
-
-
 const contenedorCarrito = document.getElementById("contenedor-carrito")
 
 const precioTotal = document.getElementById ("precio-total")
@@ -15,7 +10,6 @@ document.addEventListener ('DOMContentLoaded',  ()=> {
         carrito = JSON.parse(localStorage.getItem('carrito'));
         actualizarCarrito()
     }
-
 })
 
 const eliminarDelCarrito = (prodId) => {
@@ -51,8 +45,9 @@ const actualizarCarrito = ()=> {
         localStorage.setItem('carrito', JSON.stringify(carrito))
         
     })
-    precioTotal.innerText = carrito.reduce((acc,prod) => acc + prod.precio, 0 )
+    precioTotal.innerText = carrito.reduce((acc,prod) => acc + prod.precio * prod.cantidad, 0 )
 }
+// ====================botones modal================================
 
 const btnComprar = document.getElementById("btn-comprar");
 btnComprar.addEventListener("click",()=>{
@@ -117,7 +112,7 @@ fetch('productos.json')
         })
 })
     
-    
+ // ===============AGREGAR AL CARRITO==========================
 
 const agregarAlCarrito = (prodId) => {
     const existe = carrito.some(prod => prod.id === prodId);

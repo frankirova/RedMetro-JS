@@ -1,9 +1,7 @@
 
-// =============Arrays y variables=================
+// =============Arrays=================
 
 let listaPreciosAbonos = [];
-
-
 let listaNombresClientes = []
 let abonoElegido=[] ;
 let precioInstalacion = 9500;
@@ -15,7 +13,7 @@ const serviciosResidenciales = document.getElementById("servicios-residenciales"
 const reset = document.getElementById("btn-reset");
 
 
-// ===============================================================
+// ======================FETCH=========================================
 
 
 fetch('abonos.json')
@@ -24,7 +22,7 @@ fetch('abonos.json')
         listaAbonos.forEach((abono) => {
             let card = document.createElement ("div");
     card.className = "card-servicio";
-    card.innerHTML = `<p class="titulo-card">${abono.nombre}</p>
+    card.innerHTML = `<h3 class="wow animate__animated animate__fadeInUp titulo-card">${abono.nombre}</h3>
     <ul class="lista-servicios">
         <li class="item-lista-internet">${abono.liCaracteristicas[0]}</li>
         <li class="item-lista-internet">${abono.liCaracteristicas[1]}</li>
@@ -50,8 +48,8 @@ const boton = document.getElementById(`${abono.id}`);
 })
 });
 
-// =============formulario=====================
 
+// ========================STORAGE=====================================
 function storageForm(){
     document.addEventListener ('DOMContentLoaded',  ()=> {
 
@@ -66,12 +64,7 @@ function storageForm(){
     mostrarMensajeBienvenida()
 };
 
-// Swall.fire({
-//     title: "Bienvenido a Red Metropolitana",
-//     text:"Abono elegido:${nombreAbonoe}total : $${precioAbonoe + precioInstalacion}",
-//     icon:"succes",
-//     confirmButtonText: "Realizado"
-// })
+// ===============MSJ BIENVENIDA===============
 function mostrarMensajeBienvenida (){
     for (const abonoe of abonoElegido){
         let nombreAbonoe = abonoe.nombre
@@ -79,7 +72,6 @@ function mostrarMensajeBienvenida (){
     
         Swal.fire({
             title: 'Registrado con exito',
-            // text: 'Registrado con exito',
             icon: 'success',
             confirmButtonText: 'Ok',
             
@@ -96,7 +88,7 @@ function mostrarMensajeBienvenida (){
         `
     }
 }
-
+// =============formulario=====================
 function mostrarFormulario (){
     serviciosResidenciales.innerHTML = 
     `<div class="container">
@@ -190,7 +182,7 @@ function mostrarFormulario (){
     enviar.addEventListener("click",storageForm);
     
 };
-
+// ======================CAPTURAR DATOS DEL FORM==========================
 function capturar(){    
     const nombre =document.getElementById("fname") 
     const apellido =document.getElementById("lname") 
@@ -210,7 +202,6 @@ function capturar(){
 
     
 };
-
 let cliente = [ ];
-console.log(cliente)
+
 

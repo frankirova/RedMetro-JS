@@ -21,26 +21,28 @@
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #006C67;">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/index.html">RED METROPOLITANA</a>
+                
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle nav-item-edit active" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Servicios
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/index.html">Servicios</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="/pages/empresas.html"></a>Productos</li>
-
-                            </ul>
+                            
+                            <li class="nav-item dropdown nav-item-edit active">
+                                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Servicios
+                                </a>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="../pages/servicios.html">Residenciales</a></li>
+                                  <li><hr class="dropdown-divider"></li>
+                                  <li><a class="dropdown-item" href="../pages/empresas.html">Empresas</a></li>
+                                  
+                                </ul>
+                              </li>
                         <li class="nav-item nav-item-edit">
                             <a class="nav-link active" href="/pages/productos.html">Productos</a>
                         </li>
@@ -53,14 +55,16 @@
                         <li class="nav-item nav-item-edit">
                             <a target="_blank" class="nav-link active" href="https://redmetropolitana.autogestion.io/">Autogestión</a>
                         </li>
-
+                        
                     </ul>
+                    
                 </div>
-            </div>
-            
                 <button type="button" class=" abrir-modal" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     <i class="fa-solid fa-cart-shopping"></i>
-                  </button>
+                </button>
+            </div>
+            
+                
                   
                   <!-- Modal -->
                   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -71,7 +75,6 @@
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div id="contenedor-carrito">
-                          
                         </div>
                         <div>
                           <p class="precio-producto"><b> Precio Total:<span id = "precio-total">0</span></b></p>
@@ -102,7 +105,7 @@
             <li class="item-nav-footer"><a class="enlace-menu-footer" href="./servicios.html">Servicios</a></li>
             <li class="item-nav-footer"><a class="enlace-menu-footer" href="./empresas.html">Empresas</a></li>
             <li class="item-nav-footer"><a class="enlace-menu-footer" href="./quienes-somos.html">¿Quiénes somos?</a></li>
-            <li class="item-nav-footer"><a class="enlace-menu-footer" href="./contacto.html">Lo quiero!</a></li>
+            <li class="item-nav-footer"><a class="enlace-menu-footer" href="./pages/contacto.html">Contacto</a></li>
             <li class="item-nav-footer"><a target="_blank" class="enlace-menu-footer" href="https://redmetropolitana.autogestion.io/">Autogestión</a></li>
         </ul>
     </div>
