@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "nombre": "Hasta 6M",
+        "precio": 2990,
+        "liCaracteristicas": ["Cargo de instalación $9500","No requiere servicios adicionales","Consultar disponibilidad en la zona"]
+    },
+    {
+        "id": 2,
+        "nombre": "Hasta 10M",
+        "precio": 3940,
+        "liCaracteristicas":  ["Cargo de instalación $9500","No requiere servicios adicionales","Consultar disponibilidad en la zona"] 
+    },
+    {
+        "id": 3,
+        "nombre": "Hasta 15M",
+        "precio": 4190,
+        "liCaracteristicas": ["Cargo de instalación $9500","No requiere servicios adicionales","Consultar disponibilidad en la zona"]
+    }
+]

@@ -1,38 +1,9 @@
-// ==============Obj abonos=================
-
-const listaAbonos = [
-    {
-        id : 1,
-        nombre : "6MB",
-        precio : 2990,
-        liCaracteristicas : ["Cargo de instalación $9500","No requiere servicios adicionales","Consultar disponibilidad en la zona"]
-    },
-    {
-        id : 2,
-        nombre : "10MB",
-        precio : 3940,
-        liCaracteristicas : ["Cargo de instalación $9500","No requiere servicios adicionales","Consultar disponibilidad en la zona"]
-    },
-    {
-        id : 3,
-        nombre : "15MB",
-        precio : 4190,
-        liCaracteristicas : ["Cargo de instalación $9500","No requiere servicios adicionales","Consultar disponibilidad en la zona"]
-    }
-]
 
 // =============Arrays y variables=================
 
-let listaNombresAbonos = [];
-for (const abono of listaAbonos){
-    listaNombresAbonos.push(abono.nombre)
-} 
-
 let listaPreciosAbonos = [];
 
-for (const abono of listaAbonos){
-    listaPreciosAbonos.push(abono.precio)
-} 
+
 let listaNombresClientes = []
 let abonoElegido=[] ;
 let precioInstalacion = 9500;
@@ -43,8 +14,15 @@ const formulario =document.getElementById("formulario") ;
 const serviciosResidenciales = document.getElementById("servicios-residenciales");
 const reset = document.getElementById("btn-reset");
 
-for(const abono of listaAbonos){
-    let card = document.createElement ("div");
+
+// ===============================================================
+
+
+fetch('abonos.json')
+    .then((response) => response.json())
+    .then ((listaAbonos) => {
+        listaAbonos.forEach((abono) => {
+            let card = document.createElement ("div");
     card.className = "card-servicio";
     card.innerHTML = `<p class="titulo-card">${abono.nombre}</p>
     <ul class="lista-servicios">
@@ -55,21 +33,22 @@ for(const abono of listaAbonos){
     <p><b>$${abono.precio}</b></p>
     <button =onclick id="${abono.id}" class="btn btn-success">Elegir abono</button>`;
     serviciosResidenciales.append (card)
-    const boton = document.getElementById(`${abono.id}`);
+
+       ;
+        
+let elegirAbono = (abonoId) => {
+const item = listaAbonos.find((abono) => abono.id === abonoId);
+    abonoElegido.push(item);
+}
+const boton = document.getElementById(`${abono.id}`);
     boton.addEventListener("click",()=>{
         elegirAbono(abono.id);
         mostrarFormulario ();
         
         
     })
-
-} ;
-// ===============================================================
-
-let elegirAbono = (abonoId) => {
-const item = listaAbonos.find((abono) => abono.id === abonoId);
-    abonoElegido.push(item);
-};
+})
+});
 
 // =============formulario=====================
 

@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "nombre":"TL-WR820N",
+        "stock": 10,
+        "precio": 3550,
+        "img": "../img/820n2-300x300.jpg",
+        "liCaracteristicas":["Velocidad de transmisión Inalámbrica de 300Mbps.","IPTV es compatible con los nuevos protocolos para optimizar la transmisión"],
+        "cantidad": 1
+    },
+    {
+        "id": 2,
+        "nombre":"ARCHER C20",
+        "stock": 10,
+        "precio": 6999,
+        "img": "../img/archerc202-300x300.jpg",
+        "liCaracteristicas":["Soporta el estándar 802.11ac.","Conexiones simultáneas de 2.4GHz y 5GHz"],
+        "cantidad": 1
+    },
+    {
+        "id": 3,
+        "nombre":"TL-WR820N",
+        "stock": 10,
+        "precio": 17600,
+        "img": "../img/archerc602-300x300.jpg",
+        "liCaracteristicas":["Consigue un Wi-Fi más rápido","El avanzado Wi-Fi AC desbloquea el rendimiento de tus dispositivos inalámbricos"],
+        "cantidad": 1
+    }
+]
